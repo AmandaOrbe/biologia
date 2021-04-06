@@ -148,10 +148,39 @@ const infecciosos = document.getElementById('infecciosos');
 
 
   infecciosos.addEventListener("click", function(event){
-    console.log("infecciosos")
     event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
     event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
 
   });
 
+
+// ************************************ PHONE MENU ****************************
+
+
+const infecciososPhoneButton = document.getElementById("infecciosos-navigation__button");
+const infecciososSidebarItems = document.querySelectorAll(".sidebar-content__chapter, .sidebar-content__subchapter") ;
+
+
+infecciososPhoneButton.addEventListener("click", function(event){
+  document.getElementById("sidebar").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("hidden-phone-main");
+  document.querySelector(".navigation__icon--1").classList.toggle("navigation__icon--1x");
+  document.querySelector(".navigation__icon--3").classList.toggle("navigation__icon--3x");
+  document.querySelector(".navigation__icon--2").classList.toggle("navigation__icon--2x");
+  document.querySelector(".navigation__background").classList.toggle("navigation__background--small");
+});
+
+
+infecciososSidebarItems.forEach(function(item){
+  item.addEventListener("click", function(event){
+    document.getElementById("sidebar").classList.add("width-zero");
+    document.getElementById("main").classList.remove("width-zero");
+    document.getElementById("main").classList.remove("hidden-phone-main");
+    document.querySelector(".navigation__icon--1").classList.remove("navigation__icon--1x");
+    document.querySelector(".navigation__icon--3").classList.remove("navigation__icon--3x");
+    document.querySelector(".navigation__icon--2").classList.remove("navigation__icon--2x");
+    document.querySelector(".navigation__background").classList.remove("navigation__background--small");
+  });
+});
 
