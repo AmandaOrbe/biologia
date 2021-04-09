@@ -42,17 +42,18 @@
 
             <%= partial(:'components/concepto-clave', :locals => {  :title => t.concepto_clave,  :text => t.predictivos_highlight}) %>
 
-            <%= partial(:'components/image-big',  :locals => { :image => "images/biomarcadores-predictivos.png", :title => t.image2_title, :text => "(A) en pacientes que reciben tratamiento específico frente al biomarcador, (B) en pacientes que no reciben dicho tratamiento. (C) Pacientes que expresan, y (D) patientes que no expresan el biomarcadores de interés. En este caso se puede observar como la administración de un tratamiento específico modifica la probabilidad de supervivencia de los pacientes. Tomada de <i>ESMO Handbook of Translational Research, 2nd edition, 2015.</i>", :id => "biomarcadores-predictivos"}) %>          
+            <%= partial(:'components/image-big',  :locals => { :image => "images/biomarcadores-predictivos.png", :title => t.image2_title, :text => "(A) en pacientes que reciben tratamiento específico frente al biomarcador, (B) en pacientes que no reciben dicho tratamiento. (C) Pacientes que expresan, y (D) patientes que no expresan el biomarcadores de interés. En este caso se puede observar como la administración de un tratamiento específico modifica la probabilidad de supervivencia de los pacientes.  <br> <p><i> Tomada de ESMO Handbook of Translational Research, 2nd edition, 2015.</i></p>", :id => "biomarcadores-predictivos"}) %>          
 
             <p class= "indented margin5"> <%= t.biomarcadores_text2 %></p>
             <p class= "indented margin5"> <%= t.biomarcadores_text3 %></p>
             <p class= "indented margin5"> <%= t.biomarcadores_text4 %></p>
           </div>  
         </div>
+
         <div id="origen-genoma">        
           <%= partial(:'components/header2', :locals => { :text => t.cap2_title, :number => '02.' }) %>
           <p class= "indented margin5"> <%= t.cap2_t1 %></p>
-          <%= partial(:'components/image-big',  :locals => { :image => "images/genoma.png", :title => t.cap2_img1_title, :text => t.cap2_img1_text, :id => "genoma"}) %>
+          <%= partial(:'components/image-big',  :locals => { :image => "images/genoma.png", :title => t.cap2_img1_title, :text => "T. Recuperado de <a href="">www.cancer.gov</a>", :id => "genoma"}) %>
           <p class= "indented margin5"> <%= t.cap2_t2 %></p>        
           <%= partial(:'components/list',  :locals => { :list_items => [["", t.cap2_li1_1], ["", t.cap2_li1_2] , [ "",t.cap2_li1_3]]}) %>  
           <div id="origen-genoma1">
@@ -76,6 +77,7 @@
 
 
             <%= partial(:'components/image-big',  :locals => { :image => "images/mutaciones-somaticas.png", :title => t.cap2_img3_title, :text => "Cada punto representa una muestra, y las líneas horizontales rojas son la media de las mutaciones en los respectivos tipos de cáncer. El eje vertical en escala logarítmica muestra el número de mutaciones por megabase de datos, mientras que los diferentes tipos de cáncer están ordenados en el eje horizontal según su número medio de mutaciones somáticas. . Figura sacada de <i> Alexandrov LB, Nature, 2013</i>", :id => "mutaciones-somaticas"}) %>
+            <p class="margin5">Por otra parte, las mutaciones pueden clasificarse en 3 grandes grupos: </p>
 
             <div class="card_row">
               <%= partial(:'components/card', :locals => { :title => t.cap2_card5_title, :body => t.cap2_card5_body }) %>
@@ -154,6 +156,8 @@
               </div>
             </div>
             <br><br>
+
+              <%= partial(:'components/image-big',  :locals => { :image => "images/tipos-mutaciones.png", :title => "Figura 4: Representación gráfica de los diferentes tipos de mutaciones", :text => "", :id => "tipos-mutaciones"}) %>
 
             <div class="indented margin5">Por otra parte, podemos encontrar estos otros términos para referirnos a las mutaciones:  </div>
               <div class= "list"> 

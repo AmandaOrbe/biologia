@@ -75,7 +75,6 @@ const inflamacionChapters = [{tab: inflamacionPresentacionTab, content: inflamac
                   {tab: inflamacionIntroduccionTab, content: inflamacionIntroduccion},
                   {tab: inflamacionPerfilTab, content: inflamacionPerfil},
                   {tab: inflamacionSellosTab, content: inflamacionSellos},
-                  {tab: inflamacionLigandosTab, content: inflamacionLigandos},
                   {tab: inflamacionBiblioTab, content: inflamacionBiblio}
                 ]
 
@@ -90,6 +89,7 @@ const inflamacionSubChapters = [{tab: inflamacionEvitarTab, content: inflamacion
                   {tab: inflamacionDendriticasTab, content: inflamacionDendriticas},
                   {tab: inflamacionMoleculasTab, content: inflamacionMoleculas},
                   {tab: inflamacionFactorTab, content: inflamacionFactor},
+                  {tab: inflamacionLigandosTab, content: inflamacionLigandos},
                   {tab: inflamacionPuntoTab, content: inflamacionPunto},
                   {tab: inflamacionPunto2Tab, content: inflamacionPunto2},
                   {tab: inflamacionEstrategiasTab, content: inflamacionEstrategias},
@@ -109,7 +109,7 @@ const inflamacionSubChapters = [{tab: inflamacionEvitarTab, content: inflamacion
 // // **********************************SIDEBAR****************************
 
 
-
+console.log(inflamacionLigandosTab);
 
 window.addEventListener('scroll', function(){
 
@@ -135,8 +135,6 @@ window.addEventListener('scroll', function(){
 
 window.addEventListener('scroll', function(){
   inflamacionSubChapters.forEach(function(chapter){
-    console.log(chapter.tab);
-    console.log(chapter.content);
     if ((chapter.content.offsetTop - 500) < (window.scrollY ) && (window.scrollY ) < ((chapter.content.offsetTop- 500 ) + chapter.content.scrollHeight)) {
       chapter.tab.classList.add('sidebar-content__item--current');        
       chapter.tab.classList.remove('sidebar__content__read');

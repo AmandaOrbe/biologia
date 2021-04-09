@@ -20,6 +20,9 @@ const infecciososVirus = document.getElementById("infecciosos-virus");
 const infecciososVEBTab = document.getElementById("infecciosos-VEB-side");
 const infecciososVEB = document.getElementById("infecciosos-VEB");
 
+const infecciososHerpesvirusTab = document.getElementById("infecciosos-herpervirus-side");
+const infecciososHerpesvirus = document.getElementById("infecciosos-herpesvirus");
+
 const infecciososHepatocarcinomaTab = document.getElementById("infecciosos-hepatocarcinoma-side");
 const infecciososHepatocarcinoma = document.getElementById("infecciosos-hepatocarcinoma");
 
@@ -70,6 +73,7 @@ const infecciososChapters = [
 
 const infecciososSubChapters = [{tab: infecciososVEBTab, content: infecciososVEB} ,
                   {tab: infecciososHepatocarcinomaTab, content: infecciososHepatocarcinoma} ,
+                  {tab: infecciososHerpesvirusTab, content: infecciososHerpesvirus} ,
                   {tab: infecciososVPHTab, content: infecciososVPH},
                   {tab: infecciososMerkelTab, content: infecciososMerkel},
                   {tab: infecciososRetrovirusTab, content: infecciososRetrovirus},
@@ -87,7 +91,7 @@ const infecciososSubChapters = [{tab: infecciososVEBTab, content: infecciososVEB
 
 // // **********************************SIDEBAR****************************
 
-
+console.log(infecciososHerpesvirus);
 
 
 window.addEventListener('scroll', function(){
@@ -114,8 +118,6 @@ window.addEventListener('scroll', function(){
 
 window.addEventListener('scroll', function(){
   infecciososSubChapters.forEach(function(chapter){
-    console.log(chapter.tab);
-    console.log(chapter.content);
     if ((chapter.content.offsetTop - 500) < (window.scrollY ) && (window.scrollY ) < ((chapter.content.offsetTop- 500 ) + chapter.content.scrollHeight)) {
       chapter.tab.classList.add('sidebar-content__item--current');        
       chapter.tab.classList.remove('sidebar__content__read');
